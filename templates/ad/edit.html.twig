@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Edition de l'annonce
+{% endblock %}
+
+{% form_theme form 'ad/_collection.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<h1>Modification l'annonce {{ ad.title }}</h1>
+
+		{{ form_start(form) }}
+
+
+		{{  form_widget(form) }}
+
+		<input type="hidden" id="widget-counteur" value="0">
+
+		<button type="submit" class="btn btn-primary">Enreistrer</button>
+
+		{{ form_end(form) }}
+	</div>
+
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags('ad') }}
+{% endblock %}

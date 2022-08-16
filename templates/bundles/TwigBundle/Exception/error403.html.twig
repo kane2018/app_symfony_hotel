@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Vous n'avez pas le droit d'accéder à cette ressource
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>
+            Alors ? Vous essayez de bousiller le site ?!
+        </h1>
+        <p class="alert alert-warning">
+            Vous n'avez pas le droit d'accéder à cette ressource
+        </p>
+        <a class="btn btn-primary" href="{{ path('homepage') }}">Retour à l'accueil</a>
+    </div>
+
+{% endblock %}
+
